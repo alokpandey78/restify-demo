@@ -6,7 +6,7 @@ const rjwt = require('restify-jwt-community');
 const server = restify.createServer();
 
 // Middleware
-server.use(restify.plugins.bodyParser());
+server.use(restify.bodyParser());
 
 // Protect Routes
 // server.use(rjwt({ secret: config.JWT_SECRET }).unless({ path: ['/auth'] }));
@@ -14,8 +14,9 @@ server.use(restify.plugins.bodyParser());
 server.listen(config.PORT, () => {
   mongoose.set('useFindAndModify', false);
   mongoose.connect(
-    config.MONGODB_URI,
-    { useNewUrlParser: true }
+    config.MONGODB_URI, {
+      useNewUrlParser: true
+    }
   );
 });
 

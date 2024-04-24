@@ -8,7 +8,7 @@
     "dev": "nodemon index.js"
   },
   "keywords": [],
-  "author": "Brad Traversy",
+  "author": "Alok Pandey",
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
